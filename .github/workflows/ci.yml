@@ -24,6 +24,8 @@ jobs:
         run: npm ci
 
       - name: Run tests
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
         run: npm test
 
       - name: Build Docker image
