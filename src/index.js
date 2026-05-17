@@ -6,5 +6,6 @@ app.get("/", (req, res) =>
   res.json({ message: "Hello from DevOps Node App!" }),
 );
 app.get("/health", (req, res) => res.json({ status: "ok" }));
+app.get("/users", (req, res) => res.json({ users: ["Ram", "Shyam"] }));
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
